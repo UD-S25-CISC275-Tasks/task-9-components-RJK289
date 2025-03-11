@@ -1,7 +1,5 @@
 import { useState } from "react";
 
-function useDoubleHalfState() {
+export function useDoubleHalfState(): [number, (newVal: number) => void] {
     return useState<number>(10);
 }
-
-export const [dhValue, setDhValue] = useDoubleHalfState();
